@@ -27,5 +27,6 @@ for ((i=2004; i<=2025; i++)); do
 done
 filename=https://www.cbr.ru/vfs/credit/forms/101-20260101.rar
 wget "$filename" -O file.rar
-unar -D -f file.rar *B*.* -o data
+unar -D -f file.rar *B*.* -o dbf
+unar -D -f file.rar -o - *NAMES* > dbf/NAMES_012026.dbf
 rm file.rar
